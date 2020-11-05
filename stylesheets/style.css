@@ -1,0 +1,162 @@
+:root{
+    --main-radius:5px;
+    --main-padding:5px;
+}
+
+body{
+
+    background-color: #7fffd4;
+
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .5fr 1fr .5fr .5fr .5fr 1fr;
+    grid-template-areas: 
+        "nav nav nav links"
+        "intro intro intro intro"
+        "city dept region btns"
+        "index index index index"
+        "info digital capacity admin"
+        "conclusion conclusion conclusion conclusion";
+    grid-gap: .2rem;
+    font-family: Roboto;
+    color: #011400;
+    text-align: center;
+} 
+
+nav{
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    display: grid;
+    grid-template-columns: .2fr 1fr 1fr .2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "logo name name name";
+}
+
+#earth{
+    grid-area: logo;
+}
+
+#name{
+    text-align: left;
+    grid-area: name;
+}
+
+#links{
+    grid-area: links;
+    border-radius: var(--main-radius);
+    padding-top: 15px;
+}
+
+
+#intro{
+    grid-area: intro;   
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    text-align: left;
+    padding-left: 10%;
+}
+
+#city{
+    grid-area: city;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    margin-bottom: 0px;
+}
+
+
+#dept{
+    grid-area: dept;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#region{
+    grid-area: region;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+.paras{
+    margin-bottom: 5px;
+}
+#btns{
+    grid-area: btns;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#searchBtn{
+    margin-top: 40px;
+}
+
+.labels{
+    color: #011400;
+}
+
+.scores{
+    color: #80A0FF;
+}
+
+#index{
+
+    grid-area: index;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#info{
+
+    grid-area: info;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#digital{
+    grid-area: digital;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#capacity{
+    grid-area: capacity;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#admin{
+    grid-area: admin;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#conclusion{
+    grid-area: conclusion;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+
+@media only screen and (max-width:550px){
+     .container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .5fr 1fr .5fr .5fr .5fr .5fr 1fr .5fr .5fr 1fr;
+        grid-template-areas: 
+            "nav links"
+            "intro intro"
+            "city city"
+            "dept dept"
+            "region region"
+            "btns btns"
+            "index index"
+            "info digital"
+            "capacity admin"
+            "conclusion  conclusion";
+     }
+}

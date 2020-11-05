@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlayersD4G - Landing Page</title>
+
+    <!-- Linking Js and CSS to the HTML -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="js/main.js"></script>
+
+    <!-- jQuery cdn link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</head>
+<body id="body">
+    <div class="container">
+        <!-- Header -->
+        <nav>
+            <img id="earth" src="images/earth_logo.png" alt="eath-logo">
+            <h1 id="name">SlayersD4G</h1>
+        </nav>
+        <div id="links">
+            <a href="https://twitter.com/SlayersD4G"><img id="img" src="images/twitter_logo.png" alt="twitter-logo"></a>
+        </div>
+
+        <!-- Intro -->
+             <div id="intro" class="para">
+                 <h3>Introduction</h3>
+                 <p>The world is evolving and transitioning from human to human based communication to human to computer based ones. This transition created a need to know how adept populations are with technology this is why the Digital Fragility Index was implemented.</p>
+                 <p>This index is based on 4 criterias:</p>
+                <ul>
+                    <li class="item">Access to information: Identify areas poorly covered by an information service offer or populations who will have difficulty understanding information.</li>
+                    <li class="item">Access to digital interfaces: Identify areas poorly covered by networks or in which populations will have financial difficulties accessing them.</li>
+                    <li class="item">Ability to use digital interfaces: Identify populations among which there is a frequency of illectronism or difficulty in using the Internet.</li>
+                    <li class="item">Administrative skills: Identify populations among whom there are difficulties in carrying out administrative procedures.</li>
+                </ul>
+             </div>
+
+
+        <!-- Filters -->
+            <div id="city" class="filter">
+                <p class="paras">Select a city</p>
+                <input id="city_dropdown" list="city_list" />
+                 <!-- This is the hardcoded list that we need to populate with server cities -->
+                <datalist id="city_list">
+                    <option value="Paris" />
+                    <option value="Metz" />
+                    <option value="Versailles" />
+                </datalist>
+            </div>
+            <div id="dept" class="filter">
+                <p class="paras">Select a department</p>
+                <!-- This is the hardcoded list that we need to populate with server departments -->
+                <input id="dept_dropdown" list="department_list" />
+                <datalist id="department_list">
+                    <option value="Paris" />
+                    <option value="Moselle" />
+                    <option value="Yvelines" />
+                </datalist>
+            </div>
+            <div id="region" class="filter">
+                <p class="paras">Select a region</p>
+                <!-- This is the hardcoded list that we need to populate with server regions -->
+                <input id="region_dropdown" list="region_list" />
+                <datalist id="region_list">
+                    <option value="Ile-de-France" />
+                    <option value="Grand-Est" />
+                    <option value="Ile-de-France" />
+                </datalist>
+            </div>
+            <div id="btns">
+                <!-- This is the button that will allow us to retrieve the elements chosen in the list -->
+                <button id="searchBtn">Search</button>
+            </div>
+
+
+        <!-- Scores -->
+         <!-- These "***_score" h4 elements need to be replaced or used to display the results -->
+            <div id="index" >
+                <h3 id="index_label" class="labels">Index Score</h3>
+                <h4 id="index_score" class="scores">000</h4>
+            </div>
+            <div id="info" class="score">
+                <h4 id="info_label" class="labels">Access to information Score</h4>
+                <h5 id="info_score" class="scores">000</h5>
+            </div>
+            <div id="digital" class="score">
+                <h4 id="digital_score" class="labels">Access to digital interfaces score</h4>
+                <h5 id="digital_score" class="scores">000</h5>
+            </div>
+            <div id="capacity" class="score">
+                <h4 id="index_label" class="labels">Capacity to use digital interfaces score</h4>
+                <h5 id="index_score" class="scores">000</h5>
+            </div>
+            <div id="admin" class="score">
+                <h4 id="admin_label" class="labels">Administrative skills score</h4>
+                <h5 id="admin_score" class="scores">000</h5>
+            </div>
+
+        <!-- Conclusion -->
+            <div id="conclusion" class="para">
+                <h3>Conclusion</h3>
+                <p id=conclusion-text></p>
+            </div>
+    </div>
+
+</body>
+</html>
